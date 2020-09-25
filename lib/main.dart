@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
+import 'package:mi_card/widgets/id_photo.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,32 +25,22 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 20, bottom: 50),
+                padding: EdgeInsets.only(top: 20, bottom: 25),
                 child: logo,
               ),
-              CircleAvatar(
-                radius: 100.0,
-                backgroundImage: AssetImage('assets/profile.jpg'),
-              ),
               Padding(
-                padding: EdgeInsets.only(top: 10.0),
-                child: LiteRollingSwitch(
-                  value: false,
-                  colorOn: Colors.black26,
-                  colorOff: Colors.black12,
-                  iconOn: Icons.lightbulb_outline,
-                  iconOff: Icons.power_settings_new,
-                  onChanged: (bool state) {
-                    print('turned ${(state) ? 'on' : 'off'}');
-                  },
+                padding: EdgeInsets.only(
+                  top: 5.0,
+                  bottom: 30.0,
                 ),
+                child: PhotoImage('assets/profile.jpg'),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
                 child: Text(
-                  'Danny Francisco',
+                  'CHUCK BARTOWSKI',
                   style: TextStyle(
-                    fontSize: 40.0,
+                    fontSize: 35.0,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
